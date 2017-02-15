@@ -7,7 +7,7 @@ public class FruitBat extends Bats
 	//Variables
 	
 	//Constructors
-	public FruitBat(String name, String gender, int age, GrowthStage growthStage, String type)
+	public FruitBat(String name, String gender, int age, GrowthStage growthStage, boolean canFly, String type)
 	{
 		this.growthStage = growthStage;
 	}
@@ -50,6 +50,7 @@ public class FruitBat extends Bats
 	{
 		
 	}
+	
 	public void die(String name, String type)
 	{
 		/*if(name == Animal.name)
@@ -74,15 +75,53 @@ public class FruitBat extends Bats
 		
 	}
 
-	public void addAnimal()
+	public void addAnimal(String name, String gender, int age, GrowthStage growthStage, boolean canFly, String type)
 	{
-		
+		FruitBat tempFruitBat = new FruitBat(name, gender, age, growthStage, canFly, type);
+		Zoo.add(tempFruitBat);
+	}
+	
+	public void addAnimal(Animal a)
+	{
+		Zoo.add(a); //this could also be fruitBat fb
 	}
 
-	public void removeAnimal()
+	public void removeAnimal(String name, int age)
 	{
+		for (Animal a : Zoo)
+		{
+			if(a.name == name && a.age == age)
+			{
+				Zoo.remove(a);
+				break;
+			}
+		}
+	}
+
+	public void removeAnimal(String type)
+	{
+		for(Animal a : Zoo)
+		{
+			if (type.equals("Fruit Bat"))
+			{
+				if(a instanceof FruitBat)
+				{
+					Zoo.remove(a);
+					break;
+				}
+			}
+		}
+	}
+	
+	public void addAnimal()
+	{
+		//fully implemented methods already in place. These just need to be here.
 		
 	}
 	
-	
+	public void removeAnimal()
+	{
+		//fully implemented methods already in place. These just need to be here.
+		
+	}
 }

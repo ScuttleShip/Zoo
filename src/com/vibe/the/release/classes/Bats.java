@@ -9,9 +9,9 @@ public abstract class Bats extends Mammals implements Flying
 	public String type = "Bat";
 	
 	//Constructors
-	public Bats(String name, String gender, int age, GrowthStage growthStage,String type)
+	public Bats(String name, String gender, int age, GrowthStage growthStage, boolean canFly, String type)
 	{
-		super(name, gender, age, growthStage);
+		super(name, gender, age, growthStage, canFly);
 		this.type = type;
 	}
 	public Bats()//no args constructors

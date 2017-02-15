@@ -13,6 +13,7 @@ public abstract class Animal
 	public String gender = "No Gender assigned";
 	public int age = 0;
 	public GrowthStage growthStage;
+	public boolean canFly;
 	
 	//Arrays
 	
@@ -20,12 +21,13 @@ public abstract class Animal
 	
 	//Constructors
 	
-	public Animal(String name, String gender, int age, GrowthStage growthStage)//Generic constructor
+	public Animal(String name, String gender, int age, GrowthStage growthStage, boolean canFly)//Generic constructor
 	{
 		this.name = name;
 		this.gender = gender;
 		this.age = age;
 		this.growthStage = growthStage;
+		this.canFly = canFly;
 	}
 	
 	public Animal()//No args constructor
@@ -79,5 +81,30 @@ public abstract class Animal
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	public GrowthStage getGrowthStage() {
+		return growthStage;
+	}
+
+	public void setGrowthStage(GrowthStage growthStage) {
+		this.growthStage = growthStage;
+	}
+
+	public boolean isCanFly() {
+		return canFly;
+	}
+
+	public void setCanFly(boolean canFly) {
+		this.canFly = canFly;
+	}
+
+	public ArrayList<Animal> getZoo() {
+		return Zoo;
+	}
+
+	public void setZoo(ArrayList<Animal> zoo) {
+		Zoo = zoo;
 	}	
+	
 }

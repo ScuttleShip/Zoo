@@ -7,7 +7,7 @@ public abstract class Mammals extends Animal
 	//Variables
 	
 	//Constructors
-	public Mammals(String name, String gender, int age, GrowthStage growthStage)//Generic constructor
+	public Mammals(String name, String gender, int age, GrowthStage growthStage, boolean canFly)//Generic constructor
 	{
 		
 	}
